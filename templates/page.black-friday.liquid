@@ -1,0 +1,191 @@
+<style>
+.comingSoonPage{
+  margin:0 0 50px;
+}
+.comingSoonPage .banner_sec{
+  margin:0 0 50px;
+}
+.comingSoonPage .banner_sec img{
+  width:100%;
+}
+.comingSoonPage .hidden-xs{
+  display:block;
+}
+.comingSoonPage .visible-xs{
+  display:none;
+}
+.comingSoonPage .counter_date_list{
+  margin:0 0 50px;
+}
+.comingSoonPage .counter_date_list ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comingSoonPage .counter_date_list ul li{
+  padding:0 25px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.comingSoonPage .counter_date_list ul li span{
+  text-align:center;
+  display:block;
+  font-size:30px;
+  font-weight: 600;
+}
+.comingSoonPage #mc_embed_signup{
+   width:100%;
+  max-width:600px;
+  margin:0 auto;
+}
+.comingSoonPage #mc_embed_signup .mc-field-group{
+  width:100%;
+}
+.comingSoonPage #mc_embed_signup_scroll h2{
+  margin: 0 0 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2.5px; 
+}
+.comingSoonPage #mc_embed_signup .button{
+  background: #fff5e4;
+  border:1px solid #fff5e4;
+  color: #c3996b;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+  height: 44px; 
+}
+.comingSoonPage #mc_embed_signup .button:hover{
+  background:transparent;
+}
+.comingSoonPage #mc_embed_signup .mc-field-group input{
+  height: 45px;
+  border: 1px solid #f6f0e9;
+  border-radius: 0px;
+}
+
+section.BlackFridayFAq a.Button.Button--primary::before {
+    background: #c3996b !important;
+    color:#fff !important;
+}
+
+section.BlackFridayFAq a.Button.Button--primary {
+    color:#fff !important;
+}
+  
+@media only screen and (max-width: 768px) {
+  .comingSoonPage .hidden-xs{
+    display:none;
+  }
+  .comingSoonPage .visible-xs{
+    display:block;
+  }
+  .comingSoonPage .counter_date_list ul li{
+    padding:0 10px;
+  }
+  .comingSoonPage .counter_date_list ul li span{
+    font-size:26px;
+  }
+}
+</style>
+
+<div class="comingSoonPage">
+  {% section 'black-friday' %}
+  <!-- <div class="banner_sec">
+    <img src="https://cdn.shopify.com/s/files/1/0641/9565/7974/files/BFCM-BANNER.jpg?v=1732465513" class="hidden-xs">
+    <img src="https://cdn.shopify.com/s/files/1/0641/9565/7974/files/BFCM.jpg?v=1732449309" class="visible-xs">
+  </div> -->
+
+  <!-- Countdown Sec start -->
+  <div id="countdown" class="counter_date_list">
+     <ul class="m_0">
+       <li><span id="days"></span>days</li>
+       <li><span id="hours"></span>Hours</li>
+       <li><span id="minutes"></span>Minutes</li>
+       <li><span id="seconds"></span>Seconds</li>
+     </ul>
+   </div>
+  <!-- Countdown sec end -->
+
+<div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://noniandco.us21.list-manage.com/subscribe/post?u=ad049ae8f1a09f572e8004a95&amp;id=8dbaa6d33e&amp;f_id=00fff7e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+<div hidden=""><input type="hidden" name="tags" value="2982607"></div>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_ad049ae8f1a09f572e8004a95_8dbaa6d33e" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+</div>
+  <!--  -->
+
+</div>
+{% section 'black-friday-faq' %}
+
+<script>
+// Get the countdown container element
+const countdownContainer = document.getElementById("countdown");
+
+// Set the target date and time (adjust it according to your needs)
+// const targetDate = new Date("2024-01-14T23:59:59").getTime();
+const targetDate = new Date("2025-11-19T10:00:00+13:00").getTime();
+console.log("targetDate");
+console.log(targetDate);
+
+// Function to initialize the countdown
+function startCountdown() {
+  // Get the current date and time
+  const currentDate = new Date().getTime();
+
+  // Calculate the time remaining
+  const timeRemaining = targetDate - currentDate;
+
+  // Calculate and update the days, hours, minutes, and seconds
+  const daysElement = document.getElementById("days");
+  const hoursElement = document.getElementById("hours");
+  const minutesElement = document.getElementById("minutes");
+  const secondsElement = document.getElementById("seconds");
+
+  // Calculate the days, hours, minutes, and seconds remaining
+  let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  let hours = Math.floor(
+    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+hours = String(hours).padStart(2, "0");
+  minutes = String(minutes).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
+  // Update the HTML elements with the calculated values
+  daysElement.textContent = days;
+  hoursElement.textContent = hours;
+  minutesElement.textContent = minutes;
+  secondsElement.textContent = seconds;
+
+  // TODO: Implement the countdown logic to update the timer every second
+}
+
+// ...
+
+// Update the countdown timer every second
+setInterval(startCountdown, 1000);
+
+// ...
+
+</script>

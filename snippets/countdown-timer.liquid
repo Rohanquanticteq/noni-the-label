@@ -1,0 +1,111 @@
+<style>
+.comingSoonPage .hidden-xs{
+  display:block;
+}
+.comingSoonPage .visible-xs{
+  display:none;
+}
+.comingSoonPage .counter_date_list{
+  margin:0 0 50px;
+}
+.comingSoonPage .counter_date_list ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comingSoonPage .counter_date_list ul li{
+  padding:0 25px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.comingSoonPage .counter_date_list ul li span{
+  text-align:center;
+  display:block;
+  font-size:30px;
+  font-weight: 600;
+}
+  
+@media only screen and (max-width: 768px) {
+  .comingSoonPage .hidden-xs{
+    display:none;
+  }
+  .comingSoonPage .visible-xs{
+    display:block;
+  }
+  .comingSoonPage .counter_date_list ul li{
+    padding:0 10px;
+    font-size:12px;
+  }
+  .comingSoonPage .counter_date_list ul li span{
+    font-size:26px;
+  }
+}
+</style>
+
+<div class="comingSoonPage">
+  <!-- Countdown Sec start -->
+  <div id="countdown" class="counter_date_list">
+     <ul class="m_0">
+       <li><span id="days"></span>days</li>
+       <li><span id="hours"></span>Hours</li>
+       <li><span id="minutes"></span>Minutes</li>
+       <li><span id="seconds"></span>Seconds</li>
+     </ul>
+   </div>
+  <!-- Countdown sec end -->
+
+</div>
+
+
+<script>
+// Get the countdown container element
+const countdownContainer = document.getElementById("countdown");
+
+// Set the target date and time (adjust it according to your needs)
+// const targetDate = new Date("2024-01-14T23:59:59").getTime();
+const targetDate = new Date("2025-11-19T10:00:00+13:00").getTime();
+console.log("targetDate");
+console.log(targetDate);
+
+// Function to initialize the countdown
+function startCountdown() {
+  // Get the current date and time
+  const currentDate = new Date().getTime();
+
+  // Calculate the time remaining
+  const timeRemaining = targetDate - currentDate;
+
+  // Calculate and update the days, hours, minutes, and seconds
+  const daysElement = document.getElementById("days");
+  const hoursElement = document.getElementById("hours");
+  const minutesElement = document.getElementById("minutes");
+  const secondsElement = document.getElementById("seconds");
+
+  // Calculate the days, hours, minutes, and seconds remaining
+  let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  let hours = Math.floor(
+    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+hours = String(hours).padStart(2, "0");
+  minutes = String(minutes).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
+  // Update the HTML elements with the calculated values
+  daysElement.textContent = days;
+  hoursElement.textContent = hours;
+  minutesElement.textContent = minutes;
+  secondsElement.textContent = seconds;
+
+  // TODO: Implement the countdown logic to update the timer every second
+}
+
+// ...
+
+// Update the countdown timer every second
+setInterval(startCountdown, 1000);
+
+// ...
+
+</script>

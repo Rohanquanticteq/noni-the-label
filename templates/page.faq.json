@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faq",
+      "blocks": {
+        "7f06bc08-8808-49b2-ba80-fbe51f0f9bd8": {
+          "type": "question",
+          "settings": {
+            "title": "DOES NONI & CO SHIP WORLDWIDE?",
+            "answer": "<p>Yes, we ship Worldwide.</p>"
+          }
+        },
+        "0bc80f94-d66c-4a7d-8cd9-25c3fc4124cc": {
+          "type": "question",
+          "settings": {
+            "title": "WHO DO I CONTACT FOR ASSISTANCE WITH MY ORDER?",
+            "answer": "Please email <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a> with your order number or query."
+          }
+        },
+        "1eb59d37-c4af-4bf4-95ac-010d6fc5c1e0": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT ARE THE PAYMENT OPTIONS?",
+            "answer": "We accept Visa, MasterCard.<br>\nPaypal<br>\nLaybuy <br>\nAfterpay"
+          }
+        },
+        "f284840b-08bb-4a9b-ad55-748ab1180075": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CONTACT CUSTOMER CARE?",
+            "answer": "You can email <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a> or fill in the Contact Form."
+          }
+        },
+        "94052b51-f4a6-46b8-94d0-98d9fe338606": {
+          "type": "question",
+          "settings": {
+            "title": "IS IT SAFE TO PAY WITH MY CREDIT CARD ON NONI & CO?",
+            "answer": "At NONI & CO, we use the most secure payment gateways. If you are having difficulty checking out, please email our Customer Care team at <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a> for further assistance and we will gladly assist you further."
+          }
+        },
+        "b24192e8-660f-41b5-87ee-ed979d42d742": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I CHANGE/CANCEL MY ONLINE ORDER AFTER I HAVE PLACED IT?",
+            "answer": "Unfortunately, once you've placed your order, it is not possible to cancel or amend any details, as our warehouse team will have already started processing your order!\n\nIf an exception is made to cancel an order prior to dispatch, a processing fee and any currency conversion fee charged to NONI THE LABEL will be deducted from the refund issued for cancelling the order."
+          }
+        },
+        "28ce96bc-9602-4f10-b2c9-ed216105971f": {
+          "type": "question",
+          "settings": {
+            "title": "I JUST PLACED MY ORDER.  CAN I ADD ANOTHER ITEM TO IT?",
+            "answer": "Unfortunately, we cannot add items to an existing order. Kindly place a new order for the item and contact us by emailing <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a>"
+          }
+        },
+        "707705d7-834d-426c-9cc9-dadf3c41a44c": {
+          "type": "question",
+          "settings": {
+            "title": "WILL I RECEIVE A CONFIRMATION EMAIL AFTER I PLACE AN ORDER?",
+            "answer": "Yes. Upon placing your order, you will receive an email confirmation. If for some reason, you did not receive an email, please check your spam/junk folder first before emailing <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a>"
+          }
+        },
+        "c1d24a9c-cbcb-411b-a5dc-816409cb9009": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS A PRE-ORDER?",
+            "answer": "It is a great opportunity for our customers to secure their size in a style that is going to be arriving soon or being restocked soon. All Preorders are paid for in full at the time of purchase. "
+          }
+        },
+        "ee5dfd2c-af21-4607-a772-fc2bdb5e17af": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS THE EXPECTED ETA AND DELIVERY TIMEFRAME FOR A PREORDER?",
+            "answer": "The date of delivery is specified under the description of each product. Expected delivery times on Preorders are accurate to the best of our knowledge. Noni & Co. is not held responsible in the unlikely event that the pre-order items are delayed."
+          }
+        },
+        "8ff03fbc-da2c-40cd-92a6-a7cee10cd97b": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I PLACE ONE ORDER FOR AN INSTOCK ITEM AND A PREORDER ITEM?",
+            "answer": "Kindly place separate orders if you would like your in stock order to be shipped immediately. Alternatively, if you are happy to wait, you can place both in stock and preorders on the same purchase and your full order will be shipped once the preorder item arrives in stock."
+          }
+        },
+        "aa5afcc6-bae5-4c07-85cf-a602cac3ffee": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I CHANGE MY SHIPPING ADDRESS AFTER MY ORDER HAS BEEN PLACED?",
+            "answer": "Please email <a href=\"contact@noniandco.co.nz\">contact@noniandco.co.nz</a> immediately and we are only able to change the shipping address if the order has not been shipped already."
+          }
+        },
+        "4198501a-98ad-420e-be6f-96f98c3c15cd": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU SEND TO PO BOXES?",
+            "answer": "Yes, we are able to ship to PO Boxes within NZ. However, we are only able to deliver to physical addresses internationally, which can be home or work as we are unable to deliver to PO BOXES outside of NZ."
+          }
+        },
+        "8f6bfefe-d04e-4ff9-87ea-8e0f4b7826cb": {
+          "type": "question",
+          "settings": {
+            "title": "WHEN WILL MY ORDER BE SHIPPED?",
+            "answer": "<p>Most orders get shipped within 2-3 working days of placing the orders. This may be longer during sale period or otherwise.  Orders are not shipped on the weekends or holidays.</p>\n<p>**Please also note that business days do not include weekends or national public holidays.</p>\n<p>We use NZ Post for all New Zealand orders - which is next business day delivery (except Rural areas). We offer Standard & Express Service for international orders.</p>"
+          }
+        },
+        "5e4db994-ea5e-4586-b773-afdf130eeec2": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I TRACK MY ORDER?",
+            "answer": "<p>You will receive an email with a tracking number. Please check your Spam/Junk folder for your tracking email from COURIER POST OR DHL as many customers have found that it is treated as spam. If you are still unable to locate this anywhere you are welcome to contact us by emailing <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a>  to receive your tracking number.</p>\n<p>To track your order, NZ customers please go to <a href=\"www.courierpost.co.nz\">www.courierpost.co.nz</a> & all international orders can be tracked on www.dhl.com/track</p>"
+          }
+        },
+        "e4c96a6a-ce56-4b6b-8414-3a88041a63ac": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT HAPPENS IF MY PARCEL DOESN'T ARRIVE, OR IS LOST IN TRANSIT?",
+            "answer": "<p>Once your parcels have left our warehouse they are then property of COURIERPOST/DHL. NONI & CO. is legally not responsible for lost or damaged goods. However, if your parcel does not reach you within our delivery time, we will do all we can to track and find your parcel for you. Contact us at <a href=\"mailto:contact@noniandco.co.nz\">contact@noniandco.co.nz</a></p>\n<p>Noni & Co. is not liable to file claims for delivered packages, however we will do the needful for packages that are not delivered.</p>"
+          }
+        },
+        "d2e95859-dd05-4009-a720-12f723676dfe": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I RETURN OR EXCHANGE ITEMS THAT WERE PURCHASED ON SALE?",
+            "answer": "All sale items are final sales and cannot be returned or exchanged. <a href=\"https://www.chiffonboutique.co.nz/pages/return-policy\" target=\"_blank\">Please click here for our Returns Policy.</a>"
+          }
+        },
+        "9bedc507-000c-4064-a200-98ebe1f5ab34": {
+          "type": "question",
+          "settings": {
+            "title": "HOW LONG DOES IT TAKE TO PROCESS MY RETURN?",
+            "answer": "Returns are usually processed within 7 working days of receiving your return."
+          }
+        },
+        "33b0b99b-06d4-4ae4-a6f7-6cdf0fba0736": {
+          "type": "question",
+          "settings": {
+            "title": "DO YOU HAVE ANY STORE LOCATIONS?",
+            "answer": "No, we are an online boutique only."
+          }
+        }
+      },
+      "block_order": [
+        "7f06bc08-8808-49b2-ba80-fbe51f0f9bd8",
+        "0bc80f94-d66c-4a7d-8cd9-25c3fc4124cc",
+        "1eb59d37-c4af-4bf4-95ac-010d6fc5c1e0",
+        "f284840b-08bb-4a9b-ad55-748ab1180075",
+        "94052b51-f4a6-46b8-94d0-98d9fe338606",
+        "b24192e8-660f-41b5-87ee-ed979d42d742",
+        "28ce96bc-9602-4f10-b2c9-ed216105971f",
+        "707705d7-834d-426c-9cc9-dadf3c41a44c",
+        "c1d24a9c-cbcb-411b-a5dc-816409cb9009",
+        "ee5dfd2c-af21-4607-a772-fc2bdb5e17af",
+        "8ff03fbc-da2c-40cd-92a6-a7cee10cd97b",
+        "aa5afcc6-bae5-4c07-85cf-a602cac3ffee",
+        "4198501a-98ad-420e-be6f-96f98c3c15cd",
+        "8f6bfefe-d04e-4ff9-87ea-8e0f4b7826cb",
+        "5e4db994-ea5e-4586-b773-afdf130eeec2",
+        "e4c96a6a-ce56-4b6b-8414-3a88041a63ac",
+        "d2e95859-dd05-4009-a720-12f723676dfe",
+        "9bedc507-000c-4064-a200-98ebe1f5ab34",
+        "33b0b99b-06d4-4ae4-a6f7-6cdf0fba0736"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

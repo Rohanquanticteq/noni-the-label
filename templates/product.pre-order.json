@@ -1,0 +1,133 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": false,
+            "show_product_rating": false,
+            "show_taxes_included": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "size_chart": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_label": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_price_in_button": false,
+            "show_payment_button": true
+          }
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "8cde337f-c542-42ba-aa4a-ff35ba146093": {
+          "type": "size-guide",
+          "settings": {
+            "title": "Size Guide",
+            "content": "",
+            "page": ""
+          }
+        },
+        "e774e234-1a04-47f3-831c-0a7f315b5d7e": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "title": "Size Guide",
+            "content": "<p>Lorem dummy text</p>",
+            "page": ""
+          }
+        },
+        "5254b892-1017-4160-8e0e-4412349532ef": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "title": "Delivery & Return",
+            "content": "<p>We aim to dispatch all orders within 2 business days, excluding public holidays & weekends. If you choose an express international service, your order will be dispatched within 24 hours. <br/></p><p><strong>NEW ZEALAND </strong></p><p>FREE SHIPPING FOR ORDERS OVER $150 WITHIN NZ<br/>Flat rate $7 courier within NZ </p><p>*Please note, orders are shipped via an overnight delivery service within NZ (Except Rural). Unfortunately, all postcodes are not guaranteed overnight delivery.</p><p><strong>AUSTRALIA</strong></p><p>Free standard shipping (4-7 working days) for orders over $300</p><p>Orders over $150 - Standard Shipping $24</p><p>Orders under $150 - Standard Shipping $29</p><p>Express Shipping via DHL Express 1-2 working days $39</p><p><strong>USA</strong></p><p>Express Shipping via DHL Express 3-5 working days $59</p><p><strong>UK</strong></p><p>Express Shipping via DHL Express 3-5 working days $69</p><p><strong>ASIA</strong></p><p>Express Shipping via DHL Express 2-4 working days $45</p><p><strong>RETURN POLICY</strong></p><p>We want you to love your purchase, so if for any reason an item is not what you expected, the wrong colour or size or you are unhappy with it in anyway, it can be returned for a credit note (excluding shipping costs) provided that it is as new and in saleable condition.</p><p>Noni & Co. does not offer returns or exchanges on Sale Items so please choose your sale purchases carefully.</p><p>Please read our full returns policy <a href=\"/pages/return-policy\">here</a></p>",
+            "page": ""
+          }
+        },
+        "8f9226eb-59c9-411a-9479-ad9c77371a34": {
+          "type": "content",
+          "settings": {
+            "title": "Delivery & Return",
+            "content": "",
+            "page": "shipping"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "quantity_selector",
+        "buy_buttons",
+        "share_buttons",
+        "description",
+        "8cde337f-c542-42ba-aa4a-ff35ba146093",
+        "e774e234-1a04-47f3-831c-0a7f315b5d7e",
+        "5254b892-1017-4160-8e0e-4412349532ef",
+        "8f9226eb-59c9-411a-9479-ad9c77371a34"
+      ],
+      "settings": {
+        "image_size": "large",
+        "stack_images": true,
+        "show_thumbnails": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently-viewed-products"
+  ]
+}

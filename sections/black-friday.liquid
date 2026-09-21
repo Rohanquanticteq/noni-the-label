@@ -1,0 +1,35 @@
+{% if section.settings.desktop_banner != blank or section.settings.mobile_banner != blank %}
+ <div class="banner_sec">
+    <img src="{{ section.settings.desktop_banner | img_url:"master" }}" class="hidden-xs">
+    <img src="{{ section.settings.mobile_banner | img_url:"master"  }}" class="visible-xs">
+  </div>
+  {% endif %}
+
+{% schema %}
+{
+  "name": "Black Friday Banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_coming_soon",
+      "label": "Enable Coming Soon",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_banner",
+      "label": "Desktop Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_banner",
+      "label": "Mobile Banner"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Black Friday Banner"
+    }
+  ]
+}
+{% endschema %}

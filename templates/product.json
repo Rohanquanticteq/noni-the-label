@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": false,
+            "show_product_rating": false,
+            "show_taxes_included": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "size_chart": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_label": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_price_in_button": false,
+            "show_payment_button": false
+          }
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "335ae3b6-9d79-4e93-b85f-db04b34550bf": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "title": "Size Guide",
+            "content": "<p>{{ product.metafields.custom.size_guide_infomation | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "dcf74641-448f-40ac-9598-87c1d5b1b18c": {
+          "type": "size-guide",
+          "settings": {
+            "title": "Size Guide",
+            "content": "",
+            "page": ""
+          }
+        },
+        "117b3cec-d0aa-4ecc-81f9-8fdb32ea4c12": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "title": "Delivery / Returns",
+            "content": "<p>We aim to dispatch all orders within 2 business days, excluding public holidays & weekends. If you choose an express international service, your order will be dispatched within 24 hours. <br/></p><p><strong>NEW ZEALAND </strong></p><p>FREE SHIPPING FOR ORDERS OVER $150 WITHIN NZ<br/>Flat rate $7 courier within NZ </p><p>*Please note, orders are shipped via an overnight delivery service within NZ (Except Rural). Unfortunately, all postcodes are not guaranteed overnight delivery.</p><p><strong>AUSTRALIA</strong></p><p>Free standard shipping (4-7 working days) for orders over $300</p><p>Orders over $150 - Standard Shipping $24</p><p>Orders under $150 - Standard Shipping $29</p><p>Express Shipping via DHL Express 1-2 working days $39</p><p><strong>USA</strong></p><p>Express Shipping via DHL Express 3-5 working days $59</p><p><strong>UK</strong></p><p>Express Shipping via DHL Express 3-5 working days $69</p><p><strong>ASIA</strong></p><p>Express Shipping via DHL Express 2-4 working days $45</p><p><strong>RETURN POLICY</strong></p><p>We want you to love your purchase, so if for any reason an item is not what you expected, the wrong colour or size or you are unhappy with it in anyway, it can be returned for a credit note (excluding shipping costs) provided that it is as new and in saleable condition.</p><p>Noni & Co. does not offer returns or exchanges on Sale Items so please choose your sale purchases carefully.</p><p>Please read our full returns policy <a href=\"/pages/return-policy\">here</a></p>",
+            "page": ""
+          }
+        },
+        "ccf30c2f-39b7-4419-bc6c-8d439054cad0": {
+          "type": "content",
+          "settings": {
+            "title": "Delivery / Returns",
+            "content": "",
+            "page": "shipping"
+          }
+        },
+        "ba21ac68-9c8b-46ae-8144-8405a4316d44": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "title": "Refund",
+            "content": "<p><strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "quantity_selector",
+        "buy_buttons",
+        "share_buttons",
+        "description",
+        "335ae3b6-9d79-4e93-b85f-db04b34550bf",
+        "dcf74641-448f-40ac-9598-87c1d5b1b18c",
+        "117b3cec-d0aa-4ecc-81f9-8fdb32ea4c12",
+        "ccf30c2f-39b7-4419-bc6c-8d439054cad0",
+        "ba21ac68-9c8b-46ae-8144-8405a4316d44"
+      ],
+      "settings": {
+        "image_size": "large",
+        "stack_images": true,
+        "show_thumbnails": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently-viewed-products"
+  ]
+}

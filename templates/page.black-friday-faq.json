@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faq",
+      "blocks": {
+        "question_LwBBFq": {
+          "type": "question",
+          "settings": {
+            "title": "WHEN WILL BLACK FRIDAY ORDERS SHIP?",
+            "answer": "Due to high order volumes during our only sale of the year, shipping may take slightly longer than usual. We aim to process orders out ASAP, however, please allow upto 3 weeks and extra time for delivery."
+          }
+        },
+        "question_cWBpWg": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS A PREORDER?",
+            "answer": "Preorder allows customers to secure our most wanted pieces before the stock arrives to our warehouse. Preorders are always marked on the website with an estimated delivery date to us - these dates are only estimated and delays can occur. Only place a preorder if you are okay with these terms & conditions. If you purchase other items with your preorder item, they will be shipped together when the pre order arrives. We highly recommend placing 2 orders if you want in stock items to be delivered to you faster."
+          }
+        },
+        "question_YABbFT": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I CHANGE MY ORDER OR COMBINE MY ORDER?",
+            "answer": "Unfortunately, no changes can be made to Black Friday orders once placed. Please ensure you review your shopping carts before placing the order. We are also unable to combine shipping during this time."
+          }
+        },
+        "question_P7iVCW": {
+          "type": "question",
+          "settings": {
+            "title": "MY PREVIOUS ORDER / PREORDER HAS NOT BEEN SHIPPED YET, CAN I CANCEL AND RE-PURCHASE?",
+            "answer": "Unfortunately, any previous orders cannot be cancelled."
+          }
+        },
+        "question_A6JW3g": {
+          "type": "question",
+          "settings": {
+            "title": "CAN I RETURN AN ORDER PLACED ON BLACK FRIDAY?",
+            "answer": "Yes, you can still return the order following our Returns Policy."
+          }
+        },
+        "question_JVJrGf": {
+          "type": "question",
+          "settings": {
+            "title": "I NEED MY ORDER ASAP - WHICH SHIPPING DO I SELECT?",
+            "answer": "We highly recommend selecting Express Shipping if you require your order ASAP - Standard shipping will be taking much longer for delivery during the festive season."
+          }
+        },
+        "question_LgCgJD": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IF AN ITEM I PURCHASE OVERSELLS?",
+            "answer": "If an item oversells, we will refund back your original payment method. This can occasionally happen when only one item is left in stock and two customers checkout at the same time."
+          }
+        },
+        "question_r6PVEA": {
+          "type": "question",
+          "settings": {
+            "title": "IS THERE A FREE SHIPPING THRESHOLD DURING OUR SALE?",
+            "answer": "The free shipping threshold has temporarily been turned off. We will be offering a flat rate for Express & Standard Shipping at checkout."
+          }
+        }
+      },
+      "block_order": [
+        "question_LwBBFq",
+        "question_cWBpWg",
+        "question_YABbFT",
+        "question_P7iVCW",
+        "question_A6JW3g",
+        "question_JVJrGf",
+        "question_LgCgJD",
+        "question_r6PVEA"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
