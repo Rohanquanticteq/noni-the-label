@@ -256,8 +256,7 @@
         "type": "coming-soon",
         "settings": {
           "enable_coming_soon": true,
-          "desktop_banner": "shopify://shop_images/LIMONBLEU.jpg",
-          "mobile_banner": "shopify://shop_images/LIMONBLEU-IPHONE.jpg"
+          "hide_storefront_chrome": false
         }
       },
       "black-friday": {
