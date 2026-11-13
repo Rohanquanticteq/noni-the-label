@@ -225,6 +225,26 @@
         width: min(100%, 490px);
       }
     }
+    /* Mid-size phones: avoid an oversized card and excessive empty space above it. */
+    @media screen and (min-width: 430px) and (max-width: 749px) {
+      #shopify-section-{{ section.id }} .ComingSoon {
+        padding-top: clamp(70px, 11svh, 105px);
+        padding-bottom: 32px;
+      }
+      #shopify-section-{{ section.id }} .ComingSoon__card {
+        width: min(100%, 360px, 46svh);
+      }
+    }
+    /* Tablets: make the complete card fit below the storefront header. */
+    @media screen and (min-width: 750px) and (max-width: 1024px) {
+      #shopify-section-{{ section.id }} .ComingSoon {
+        min-height: min(100svh, 640px);
+        padding: 20px 16px;
+      }
+      #shopify-section-{{ section.id }} .ComingSoon__card {
+        width: min(100%, 360px, 46svh);
+      }
+    }
     @media screen and (max-width: 380px) {
       #shopify-section-{{ section.id }} .ComingSoon { padding-inline: 2vw; }
       #shopify-section-{{ section.id }} .ComingSoon__card { width: 100%; }
