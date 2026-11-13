@@ -256,7 +256,28 @@
         "type": "coming-soon",
         "settings": {
           "enable_coming_soon": true,
-          "hide_storefront_chrome": false
+          "hide_storefront_chrome": false,
+          "desktop_banner": "shopify://shop_images/Two_Pairs_of_Girls_in_Pink.png",
+          "mobile_banner": "shopify://shop_images/0H4A3362-2_91f89ca4-20ea-4987-bb24-e8859663026e.jpg",
+          "eyebrow": "BE THE FIRST TO SHOP",
+          "discount": "BLACK",
+          "scope": "FRIDAY",
+          "duration": "SHOP 30 MINUTES BEFORE EVERYONE ELSE",
+          "celebration": "CELEBRATING 550K FOLLOWERS",
+          "early_access": "VIP ACCESS FROM 9:30AM NZT",
+          "event_date": "FRIDAY 24 NOVEMBER",
+          "event_time": "10AM NZT",
+          "alarm_text": "SET YOUR ALARMS",
+          "email_placeholder": "Email address",
+          "button_label": "GET EARLY ACCESS",
+          "card_color": "#fffaf4",
+          "accent_color": "#d37f77",
+          "text_color": "#493326",
+          "field_color": "#fffaf4",
+          "field_text_color": "#80736b",
+          "first_name_placeholder": "First name",
+          "pill_color": "#f8ded9",
+          "show_first_name": true
         }
       },
       "black-friday": {

@@ -5,7 +5,7 @@
             {%- for type in shop.enabled_payment_types -%}
                 <li class="ps-payment-icons-item hidden">
                     {%- capture svg_html -%}
-                        {{- type | payment_type_svg_tag, class: 'custom_class' -}}
+                        {{- type | payment_type_svg_tag: class: 'custom_class' -}}
                     {%- endcapture -%}
                     {{ svg_html | replace: 'custom_class', custom_class }}
                 </li>
@@ -80,3 +80,13 @@
     display: none;
 }
 </style>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{- type | payment_type_svg_tag, class: 'custom_class' -}}"
+  to: "{{- type | payment_type_svg_tag: class: 'custom_class' -}}"
+  position: 381..439
+{% endcomment %}
