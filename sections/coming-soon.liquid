@@ -216,7 +216,7 @@
     @media screen and (max-width: 749px) {
       #shopify-section-{{ section.id }} .ComingSoon {
         place-items: start center;
-        padding: max(27svh, 175px) 4vw max(7svh, 36px);
+        padding: max(37svh, 255px) 4vw max(7svh, 36px);
       }
       #shopify-section-{{ section.id }} .ComingSoon__background img {
         object-position: center top;
@@ -225,22 +225,14 @@
         width: min(100%, 490px);
       }
     }
-    /* Mid-size phones: avoid an oversized card and excessive empty space above it. */
+    /* Make room above the card for the girls' faces on small screens. */
     @media screen and (min-width: 430px) and (max-width: 749px) {
       #shopify-section-{{ section.id }} .ComingSoon {
-        padding-top: clamp(70px, 11svh, 105px);
+        padding-top: clamp(170px, 23svh, 195px);
         padding-bottom: 32px;
       }
       #shopify-section-{{ section.id }} .ComingSoon__card {
         width: min(100%, 395px, 50svh);
-      }
-    }
-    /* At wider mobile sizes, lift the photo within its clipped background
-       so the girls' faces sit higher without altering the card or form. */
-    @media screen and (min-width: 600px) and (max-width: 749px) {
-      #shopify-section-{{ section.id }} .ComingSoon__background img {
-        top: -60px;
-        height: calc(100% + 60px);
       }
     }
     /* Tablets: make the complete card fit below the storefront header. */
