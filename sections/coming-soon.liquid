@@ -70,6 +70,7 @@
     #shopify-section-{{ section.id }} .ComingSoon__eyebrow,
     #shopify-section-{{ section.id }} .ComingSoon__date,
     #shopify-section-{{ section.id }} .ComingSoon__vip,
+    #shopify-section-{{ section.id }} .ComingSoon__countdown,
     #shopify-section-{{ section.id }} .ComingSoon__pill,
     #shopify-section-{{ section.id }} .ComingSoon__button {
       font-family: var(--heading-font-family, Arial, sans-serif);
@@ -139,6 +140,31 @@
       line-height: 1.35;
       letter-spacing: .15em;
       white-space: nowrap;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 2.4cqw;
+      width: 100%;
+      margin: 0 0 2.4cqw;
+      font-size: 2.8cqw;
+      line-height: 1.35;
+      letter-spacing: .15em;
+      white-space: nowrap;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-unit {
+      display: inline-flex;
+      align-items: baseline;
+      gap: .5cqw;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-value {
+      min-width: 2ch;
+      color: var(--coming-accent);
+      font-variant-numeric: tabular-nums;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-zone {
+      color: var(--coming-accent);
     }
     #shopify-section-{{ section.id }} .ComingSoon__divider {
       display: flex;
@@ -287,6 +313,21 @@
         <div class="ComingSoon__divider" aria-hidden="true">
           <svg class="ComingSoon__heart" viewBox="0 0 24 24"><path d="M12 21C9 16.5 2 12.7 2 7.7 2 4.7 4 3 6.7 3c2.3 0 4 1.5 5.3 3.2C13.3 4.5 15 3 17.3 3 20 3 22 4.7 22 7.7c0 5-7 8.8-10 13.3Z"></path></svg>
         </div>
+        {%- if section.settings.show_countdown and section.settings.countdown_target != blank -%}
+          <div
+            class="ComingSoon__countdown"
+            data-coming-countdown
+            data-target="{{ section.settings.countdown_target | escape }}"
+            role="timer"
+            aria-label="Countdown to early access in New Zealand time"
+          >
+            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-days>00</span>D</span>
+            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-hours>00</span>H</span>
+            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-minutes>00</span>M</span>
+            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-seconds>00</span>S</span>
+            <span class="ComingSoon__countdown-zone">NZT</span>
+          </div>
+        {%- endif -%}
         <form class="ComingSoon__form" action="https://noniandco.us21.list-manage.com/subscribe/post?u=ad049ae8f1a09f572e8004a95&amp;id=8dbaa6d33e&amp;f_id=00fff7e6f0" method="post" target="_blank">
           {%- if section.settings.show_first_name -%}
             <label class="u-visually-hidden" for="ComingSoonName-{{ section.id }}">First name</label>
@@ -301,6 +342,53 @@
       </div>
     </div>
   </section>
+
+  {%- if section.settings.show_countdown and section.settings.countdown_target != blank -%}
+    <script>
+      (() => {
+        const section = document.getElementById('shopify-section-{{ section.id }}');
+        const countdown = section && section.querySelector('[data-coming-countdown]');
+
+        if (!countdown) return;
+
+        const target = Date.parse(countdown.dataset.target);
+        if (Number.isNaN(target)) {
+          countdown.hidden = true;
+          return;
+        }
+
+        const parts = {
+          days: countdown.querySelector('[data-days]'),
+          hours: countdown.querySelector('[data-hours]'),
+          minutes: countdown.querySelector('[data-minutes]'),
+          seconds: countdown.querySelector('[data-seconds]')
+        };
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        let interval;
+
+        const updateCountdown = () => {
+          const remaining = Math.max(0, target - Date.now());
+
+          parts.days.textContent = String(Math.floor(remaining / day)).padStart(2, '0');
+          parts.hours.textContent = String(Math.floor((remaining % day) / hour)).padStart(2, '0');
+          parts.minutes.textContent = String(Math.floor((remaining % hour) / minute)).padStart(2, '0');
+          parts.seconds.textContent = String(Math.floor((remaining % minute) / second)).padStart(2, '0');
+
+          if (remaining === 0 && interval) clearInterval(interval);
+        };
+
+        updateCountdown();
+        interval = setInterval(updateCountdown, second);
+
+        document.addEventListener('shopify:section:unload', (event) => {
+          if (event.detail.sectionId === '{{ section.id }}') clearInterval(interval);
+        }, { once: true });
+      })();
+    </script>
+  {%- endif -%}
 {%- endif -%}
 
 {% schema %}
@@ -390,6 +478,19 @@
       "id": "alarm_text",
       "label": "Reminder text",
       "default": "SET YOUR ALARMS"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_countdown",
+      "label": "Show countdown timer",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "countdown_target",
+      "label": "Countdown target (NZT)",
+      "info": "Use an ISO 8601 date with the New Zealand offset, for example 2026-11-27T10:00:00+13:00.",
+      "default": "2026-11-27T10:00:00+13:00"
     },
     {
       "type": "text",
