@@ -216,7 +216,8 @@
     @media screen and (max-width: 749px) {
       #shopify-section-{{ section.id }} .ComingSoon {
         place-items: start center;
-        padding: max(37svh, 255px) 4vw max(7svh, 36px);
+        /* Keep the portrait's faces in their own visual band above the opaque card. */
+        padding: clamp(300px, 40svh, 400px) 4vw max(7svh, 36px);
       }
       #shopify-section-{{ section.id }} .ComingSoon__background img {
         object-position: center top;
@@ -225,10 +226,9 @@
         width: min(100%, 490px);
       }
     }
-    /* Make room above the card for the girls' faces on small screens. */
+    /* Keep the card compact on larger phones without reducing the image space. */
     @media screen and (min-width: 430px) and (max-width: 749px) {
       #shopify-section-{{ section.id }} .ComingSoon {
-        padding-top: clamp(170px, 23svh, 195px);
         padding-bottom: 32px;
       }
       #shopify-section-{{ section.id }} .ComingSoon__card {
