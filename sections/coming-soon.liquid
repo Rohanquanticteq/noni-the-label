@@ -142,29 +142,54 @@
       white-space: nowrap;
     }
     #shopify-section-{{ section.id }} .ComingSoon__countdown {
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-      gap: 2.4cqw;
       width: 100%;
-      margin: 0 0 2.4cqw;
-      font-size: 2.8cqw;
-      line-height: 1.35;
-      letter-spacing: .15em;
-      white-space: nowrap;
-    }
-    #shopify-section-{{ section.id }} .ComingSoon__countdown-unit {
-      display: inline-flex;
-      align-items: baseline;
-      gap: .5cqw;
-    }
-    #shopify-section-{{ section.id }} .ComingSoon__countdown-value {
-      min-width: 2ch;
-      color: var(--coming-accent);
+      margin: 0 0 3.3cqw;
+      font-family: var(--heading-font-family, Arial, sans-serif);
+      color: var(--coming-text);
+      text-align: center;
       font-variant-numeric: tabular-nums;
     }
-    #shopify-section-{{ section.id }} .ComingSoon__countdown-zone {
-      color: var(--coming-accent);
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-heading {
+      margin: 0 0 1.7cqw;
+      font-size: 2.65cqw;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: .17em;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.75cqw;
+      width: 86%;
+      margin: 0 auto;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1cqw;
+      min-width: 0;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-value {
+      display: grid;
+      place-items: center;
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 8.2cqw;
+      border: 1px solid var(--coming-accent);
+      border-radius: 1.7cqw;
+      background: var(--coming-field);
+      color: var(--coming-text);
+      font-family: Didot, "Bodoni 72", "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 5.25cqw;
+      line-height: 1;
+    }
+    #shopify-section-{{ section.id }} .ComingSoon__countdown-caption {
+      font-size: 2.15cqw;
+      font-weight: 500;
+      letter-spacing: .09em;
+      line-height: 1.1;
     }
     #shopify-section-{{ section.id }} .ComingSoon__divider {
       display: flex;
@@ -300,34 +325,29 @@
         <path d="M 68 52 Q 108 0 148 52 Q 188 0 228 52 Q 268 0 308 52 Q 348 0 388 52 Q 428 0 468 52 Q 508 0 548 52 Q 588 0 628 52 C 662 52 671 65 665 83 Q 690 122.5 665 162 Q 690 201.5 665 241 Q 690 280.5 665 320 Q 690 359.5 665 399 Q 690 438.5 665 478 Q 690 517.5 665 557 Q 690 596.5 665 636 Q 690 675.5 665 715 Q 690 754.5 665 794 Q 690 833.5 665 873 Q 690 912.5 665 952 C 673 972 655 990 640 990 Q 588 1032 548 990 Q 508 1032 468 990 Q 428 1032 388 990 Q 348 1032 308 990 Q 268 1032 228 990 Q 188 1032 148 990 Q 108 1032 68 990 C 48 990 34 974 35 952 Q 10 912.5 35 873 Q 10 833.5 35 794 Q 10 754.5 35 715 Q 10 675.5 35 636 Q 10 596.5 35 557 Q 10 517.5 35 478 Q 10 438.5 35 399 Q 10 359.5 35 320 Q 10 280.5 35 241 Q 10 201.5 35 162 Q 10 122.5 35 83 C 29 65 42 52 68 52 Z" transform="translate(350 520) scale(.978 .986) translate(-350 -520)" fill="none" stroke="var(--coming-accent)" stroke-width="1.4"></path>
       </svg>
       <div class="ComingSoon__content">
-        <p class="ComingSoon__eyebrow">{{ section.settings.eyebrow | escape }}</p>
-        <hr class="ComingSoon__rule">
         <h1 id="ComingSoonTitle-{{ section.id }}" class="ComingSoon__title">
           <span>{{ section.settings.discount | escape }}</span>
           <span>{{ section.settings.scope | escape }}</span>
         </h1>
         <p class="ComingSoon__pill">{{ section.settings.duration | escape }}</p>
+        {%- if section.settings.show_countdown and section.settings.countdown_target != blank -%}
+          <div class="ComingSoon__countdown" data-coming-countdown data-target="{{ section.settings.countdown_target | escape }}" role="timer" aria-label="Countdown to VIP early access">
+            <p class="ComingSoon__countdown-heading">VIP ACCESS OPENS IN</p>
+            <div class="ComingSoon__countdown-grid">
+              <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-days>00</span><span class="ComingSoon__countdown-caption">DAYS</span></span>
+              <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-hours>00</span><span class="ComingSoon__countdown-caption">HOURS</span></span>
+              <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-minutes>00</span><span class="ComingSoon__countdown-caption">MINS</span></span>
+              <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-seconds>00</span><span class="ComingSoon__countdown-caption">SECS</span></span>
+            </div>
+          </div>
+        {%- endif -%}
         <p class="ComingSoon__date">{{ section.settings.event_date | escape }}</p>
         <p class="ComingSoon__time">{{ section.settings.event_time | escape }}</p>
         <p class="ComingSoon__vip">{{ section.settings.early_access | escape }}</p>
         <div class="ComingSoon__divider" aria-hidden="true">
           <svg class="ComingSoon__heart" viewBox="0 0 24 24"><path d="M12 21C9 16.5 2 12.7 2 7.7 2 4.7 4 3 6.7 3c2.3 0 4 1.5 5.3 3.2C13.3 4.5 15 3 17.3 3 20 3 22 4.7 22 7.7c0 5-7 8.8-10 13.3Z"></path></svg>
         </div>
-        {%- if section.settings.show_countdown and section.settings.countdown_target != blank -%}
-          <div
-            class="ComingSoon__countdown"
-            data-coming-countdown
-            data-target="{{ section.settings.countdown_target | escape }}"
-            role="timer"
-            aria-label="Countdown to early access in New Zealand time"
-          >
-            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-days>00</span>D</span>
-            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-hours>00</span>H</span>
-            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-minutes>00</span>M</span>
-            <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-seconds>00</span>S</span>
-            <span class="ComingSoon__countdown-zone">NZT</span>
-          </div>
-        {%- endif -%}
+
         <form class="ComingSoon__form" action="https://noniandco.us21.list-manage.com/subscribe/post?u=ad049ae8f1a09f572e8004a95&amp;id=8dbaa6d33e&amp;f_id=00fff7e6f0" method="post" target="_blank">
           {%- if section.settings.show_first_name -%}
             <label class="u-visually-hidden" for="ComingSoonName-{{ section.id }}">First name</label>
@@ -465,7 +485,7 @@
       "type": "text",
       "id": "event_date",
       "label": "Event date",
-      "default": "FRIDAY 24 NOVEMBER"
+      "default": "TUESDAY 24 NOVEMBER"
     },
     {
       "type": "text",
@@ -489,8 +509,8 @@
       "type": "text",
       "id": "countdown_target",
       "label": "Countdown target (NZT)",
-      "info": "Use an ISO 8601 date with the New Zealand offset, for example 2026-11-27T10:00:00+13:00.",
-      "default": "2026-11-27T10:00:00+13:00"
+      "info": "ISO 8601 with NZ offset. Example: 2026-11-24T09:30:00+13:00. Countdown is to VIP access opening.",
+      "default": "2026-11-24T09:30:00+13:00"
     },
     {
       "type": "text",
