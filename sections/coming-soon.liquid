@@ -149,13 +149,6 @@
       text-align: center;
       font-variant-numeric: tabular-nums;
     }
-    #shopify-section-{{ section.id }} .ComingSoon__countdown-heading {
-      margin: 0 0 1.7cqw;
-      font-size: 2.65cqw;
-      font-weight: 500;
-      line-height: 1.2;
-      letter-spacing: .17em;
-    }
     #shopify-section-{{ section.id }} .ComingSoon__countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -332,7 +325,6 @@
         <p class="ComingSoon__pill">{{ section.settings.duration | escape }}</p>
         {%- if section.settings.show_countdown and section.settings.countdown_target != blank -%}
           <div class="ComingSoon__countdown" data-coming-countdown data-target="{{ section.settings.countdown_target | escape }}" role="timer" aria-label="Countdown to VIP early access">
-            <p class="ComingSoon__countdown-heading">VIP ACCESS OPENS IN</p>
             <div class="ComingSoon__countdown-grid">
               <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-days>00</span><span class="ComingSoon__countdown-caption">DAYS</span></span>
               <span class="ComingSoon__countdown-unit"><span class="ComingSoon__countdown-value" data-hours>00</span><span class="ComingSoon__countdown-caption">HOURS</span></span>
