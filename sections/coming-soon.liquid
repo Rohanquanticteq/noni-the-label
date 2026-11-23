@@ -95,14 +95,51 @@
       display: flex;
       flex-direction: column;
       margin: 0 0 3.6cqw;
-      font-family: Didot, "Bodoni 72", "Bodoni MT", "Times New Roman", serif;
-      font-size: 18.8cqw;
+      font-family:Montserrat, sans-serif, "Times New Roman";
+      {% comment %} font-family: Didot, "Bodoni 72", "Times New Roman", serif; {% endcomment %}
+      font-size: 20px;
       line-height: .83;
       letter-spacing: -.055em;
       font-weight: 400;
-      color: var(--coming-accent);
+      color: #c3996b;
       text-transform: uppercase;
     }
+      #shopify-section-{{ section.id }} .ComingSoon__offer {
+        margin: 0 0 3cqw;
+        font-family: Didot, "Bodoni 72", "Bodoni MT", "Times New Roman", serif;
+        font-size: {{ section.settings.offer_font_size }}px;
+        line-height: .95;
+        font-weight: 400;
+        letter-spacing: -.025em;
+        color: {{ section.settings.offer_text_color }};
+        text-transform: uppercase;
+        font-style: italic;
+      }
+
+      #shopify-section-{{ section.id }} .ComingSoon__storewide {
+        margin: 0 0 5cqw;
+        font-family: Didot, "Bodoni 72", "Times New Roman", serif;
+        font-size: 4.5cqw;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--coming-text);
+        text-align: center;
+      }
+
+      #shopify-section-{{ section.id }} .ComingSoon__two-days {
+        margin: 0 0 4cqw;
+        font-family: var(--heading-font-family, Arial, sans-serif);
+        font-size: 3.45cqw;;
+        font-weight: 500;
+        line-height: 1.3;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--coming-text);
+        text-align: center;
+      }
+
     #shopify-section-{{ section.id }} .ComingSoon__pill {
       width: 100%;
       box-sizing: border-box;
@@ -318,11 +355,33 @@
         <path d="M 68 52 Q 108 0 148 52 Q 188 0 228 52 Q 268 0 308 52 Q 348 0 388 52 Q 428 0 468 52 Q 508 0 548 52 Q 588 0 628 52 C 662 52 671 65 665 83 Q 690 122.5 665 162 Q 690 201.5 665 241 Q 690 280.5 665 320 Q 690 359.5 665 399 Q 690 438.5 665 478 Q 690 517.5 665 557 Q 690 596.5 665 636 Q 690 675.5 665 715 Q 690 754.5 665 794 Q 690 833.5 665 873 Q 690 912.5 665 952 C 673 972 655 990 640 990 Q 588 1032 548 990 Q 508 1032 468 990 Q 428 1032 388 990 Q 348 1032 308 990 Q 268 1032 228 990 Q 188 1032 148 990 Q 108 1032 68 990 C 48 990 34 974 35 952 Q 10 912.5 35 873 Q 10 833.5 35 794 Q 10 754.5 35 715 Q 10 675.5 35 636 Q 10 596.5 35 557 Q 10 517.5 35 478 Q 10 438.5 35 399 Q 10 359.5 35 320 Q 10 280.5 35 241 Q 10 201.5 35 162 Q 10 122.5 35 83 C 29 65 42 52 68 52 Z" transform="translate(350 520) scale(.978 .986) translate(-350 -520)" fill="none" stroke="var(--coming-accent)" stroke-width="1.4"></path>
       </svg>
       <div class="ComingSoon__content">
+        <p class="ComingSoon__eyebrow">{{ section.settings.eyebrow| escape }}</p>
+        <hr class="ComingSoon__rule">
         <h1 id="ComingSoonTitle-{{ section.id }}" class="ComingSoon__title">
           <span>{{ section.settings.discount | escape }}</span>
           <span>{{ section.settings.scope | escape }}</span>
         </h1>
-        <p class="ComingSoon__pill">{{ section.settings.duration | escape }}</p>
+         {% if section.settings.offer_text != blank %}
+          <p class="ComingSoon__offer">
+            {{ section.settings.offer_text | escape }}
+          </p> 
+        {% endif %}
+        {% if section.settings.storewide_text != blank %}
+        <p class="ComingSoon__storewide">
+          {{ section.settings.storewide_text | escape }}
+        </p>
+      {% endif %}
+
+      {% if section.settings.two_days_text != blank %}
+        <p class="ComingSoon__two-days">
+          {{ section.settings.two_days_text | escape }}
+        </p>
+      {% endif %}
+        {% if section.settings.duration != blank %}
+        <p class="ComingSoon__pill">
+          {{ section.settings.duration | escape }}
+        </p>
+       {% endif %}
         {%- if section.settings.show_countdown and section.settings.countdown_target != blank -%}
           <div class="ComingSoon__countdown" data-coming-countdown data-target="{{ section.settings.countdown_target | escape }}" role="timer" aria-label="Countdown to VIP early access">
             <div class="ComingSoon__countdown-grid">
@@ -454,6 +513,39 @@
       "id": "scope",
       "label": "Sale scope",
       "default": "FRIDAY"
+    },
+    {
+      "type": "text",
+      "id": "offer_text",
+      "label": "Offer Text",
+      "default": "20% OFF"
+    },
+    {
+      "type": "range",
+      "id": "offer_font_size",
+      "label": "Offer Font Size",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "offer_text_color",
+      "label": "Offer Text Color",
+      "default": "#d37f77"
+    },
+    {
+      "type": "text",
+      "id": "storewide_text",
+      "label": "Storewide Text",
+      "default": "STOREWIDE"
+    },
+    {
+      "type": "text",
+      "id": "two_days_text",
+      "label": "Two Days Only Text",
+      "default": "TWO DAYS ONLY"
     },
     {
       "type": "text",
